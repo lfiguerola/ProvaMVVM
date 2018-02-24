@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PruebaMVVM"
+             xmlns:resources="clr-namespace:PruebaMVVM.Resources"
+             x:Class="PruebaMVVM.MainPage">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <!--entry i button -->
+            <Entry Placeholder="{x:Static resources:Strings.PlaceHolderText}" Text ="{Binding Item.Name, Mode=OneWayToSource}" x:Name="Entrytext"/>
+            <Button Text="{x:Static resources:Strings.ClearText}" Command="{Binding ClearCommand}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <!-- label i boxview -->
+            <Label x:Name="boxviewlabel" Text="{Binding Item.Name}"/>
+            <BoxView Color="{Binding Item.Name, Converter={StaticResource StringToColorConverter}}}" WidthRequest="{Binding Source={x:Reference boxviewlabel}, Path=WidthRequest}}"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
+
