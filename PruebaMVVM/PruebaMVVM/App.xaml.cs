@@ -16,7 +16,7 @@ namespace PruebaMVVM
             //Same as App.xaml resource dictionary (need using...)
             //Resources.Add("ConverterQueToca", new StringToColorConverter());
 
-			MainPage = new PruebaMVVM.MainPage();
+			MainPage = new Views.MainPage();
 		}
 
 		protected override void OnStart ()

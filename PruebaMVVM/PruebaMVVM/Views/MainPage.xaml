@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PruebaMVVM"
              xmlns:resources="clr-namespace:PruebaMVVM.Resources"
-             x:Class="PruebaMVVM.MainPage">
+             x:Class="PruebaMVVM.Views.MainPage">
     <StackLayout Orientation="Vertical">
         <StackLayout Orientation="Horizontal">
             <!--entry i button -->
