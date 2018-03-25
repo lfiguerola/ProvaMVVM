@@ -23,15 +23,26 @@ namespace PruebaMVVM.ViewModels
 
         public ICommand ClearCommand { get; set; }  
 
+        /// <summary>
+        /// This is an useless command with useless summary :)
+        /// </summary>
+        public ICommand UselessCommand { get; set; }
+
         public ViewModel()
         {
             Item = new Item();
             ClearCommand = new Command(HandleClearCommand);
+            UselessCommand = new Command(HandleUselessCommand);
         }
 
         void HandleClearCommand()
         {
             Item.Name = string.Empty;
+        }
+
+        void HandleUselessCommand()
+        {
+            Item.Name = "Now I'm useless";
         }
     }
 }
