@@ -20,6 +20,7 @@
                 <Label Text="Label on scroll view" HorizontalOptions="Center"/>
                 <Button Text="Useless button" Command="{Binding UselessCommand}"></Button>
                 <BoxView BackgroundColor="Blue" HeightRequest="1200" WidthRequest="50"/>
+                 <Button Text="Hola binixi" Command="{Binding ItemNameChangeCommand}"/>
             </StackLayout>
         </ScrollView>
     </StackLayout>
