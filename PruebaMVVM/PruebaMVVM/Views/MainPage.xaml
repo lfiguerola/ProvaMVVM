@@ -10,14 +10,18 @@
             <Entry Placeholder="{x:Static resources:Strings.PlaceHolderText}" Text ="{Binding Item.Name, Mode=OneWayToSource}" x:Name="Entrytext"/>
             <Button Text="{x:Static resources:Strings.ClearText}" Command="{Binding ClearCommand}"/>
         </StackLayout>
-
         <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
             <!-- label i boxview -->
             <Label x:Name="boxviewlabel" Text="{Binding Item.Name}"/>
             <BoxView Color="{Binding Item.Name, Converter={StaticResource StringToColorConverter}}}" WidthRequest="{Binding Source={x:Reference boxviewlabel}, Path=WidthRequest}}"/>
         </StackLayout>
-
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Label on scroll view" HorizontalOptions="Center"/>
+                <Button Text="Useless button" Command="{Binding UselessCommand}"></Button>
+                <BoxView BackgroundColor="Blue" HeightRequest="1200" WidthRequest="50"/>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
-
 </ContentPage>
 
